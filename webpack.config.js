@@ -36,6 +36,7 @@ module.exports = {
               url: false
             }
           },
+          'postcss-loader',
           'sass-loader'
         ] // Загрузчики, используемые для обработки SCSS, SASS, CSS-файлов
       },
