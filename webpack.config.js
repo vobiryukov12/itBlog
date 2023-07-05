@@ -30,7 +30,12 @@ module.exports = {
         test: /\.(c|sa|sc)ss$/i, // Регулярное выражение для обработки файлов с расширением .scss, .sass, .css
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          },
           'sass-loader'
         ] // Загрузчики, используемые для обработки SCSS, SASS, CSS-файлов
       },
@@ -46,13 +51,6 @@ module.exports = {
         }, {
           loader: 'svgo-loader'
         }]
-      },
-      {
-        test: /\.(woff(2)?|ttf|eot)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: './fonts/[name][ext]'
-        }
       }
     ]
   },
