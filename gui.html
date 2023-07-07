@@ -10,6 +10,20 @@
     .gui__block {
         margin-bottom: 40px;
     }
+
+    .buttons__list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    h4 {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body class="page">
@@ -25,9 +39,103 @@
   <div class="page__content content">
     <div class="content__container container">
       <div class="gui">
-        GUI
+        <!-- Кнопки -->
         <div class="gui__block">
-          <h2>Заголовок блока</h2>
+          <h2>Кнопки</h2>
+
+            <!-- Залитые -->
+            <h4>Залитые</h4> 
+            <div class="buttons">
+                <ul class="buttons__list">
+                    <li class="buttons__item"><button class="button button--covered button--blue" type="button"><span class="button__text">Залитая большая</span></button></li>
+                    <li class="buttons__item"><button class="button button--covered button--blue button--medium" type="button"><span class="button__text">Залитая средняя</span></button></li>
+                    <li class="buttons__item"><button class="button button--covered button--disabled button--medium" type="button" disabled><span class="button__text">Залитая средняя недоступная</span></button></li>
+                    <li class="buttons__item"><a class="button button--covered button--blue button--small" href="#"><span class="button__text">Залитая маленькая ссылка</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Залитые скруглённые -->
+            <h4>Залитые скруглённые </h4>
+            <div class="buttons">
+                <ul class="buttons__list">
+                    <li class="buttons__item"><button class="button button--covered button--blue button--ellipse" type="button"><span class="button__text">Залитая большая</span></button></li>
+                    <li class="buttons__item"><button class="button button--covered button--blue button--ellipse button--medium" type="button"><span class="button__text">Залитая средняя</span></button></li>
+                    <li class="buttons__item"><button class="button button--covered button--disabled button--ellipse button--medium" type="button" disabled><span class="button__text">Залитая средняя недоступная</span></button></li>
+                </ul>
+            </div>
+
+            <!-- Залитые с иконками -->
+            <h4>Залитые с иконками</h4>
+            <div class="buttons">
+                <ul class="buttons__list">
+                    <li class="buttons__item">
+                        <button class="button button--covered button--blue" type="button">
+                            <span class="button__text">С иконкой справа</span>
+                            <span class="button__icon button__icon--right">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="public/icons/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span> 
+                        </button>
+                    </li>
+
+                    <li class="buttons__item">
+                        <button class="button button--covered button--blue" type="button">
+                            <span class="button__icon">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="public/icons/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span> 
+                            <span class="button__text">С иконкой слева</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Простые -->
+            <h4>Простые</h4>
+            <div class="buttons">
+                <ul class="buttons__list">
+                    <li class="buttons__item"><button class="button button--simple button--blue" type="button"><span class="button__text">Простая</span></button></li>
+                    <li class="buttons__item">
+                        <button class="button button--simple button--blue" type="button">
+                            <span class="button__text">Простая с иконкой</span>                                
+                            <span class="button__icon button__icon--right">
+                                <svg class="icon icon--arrow">
+                                    <use xlink:href="public/icons/sprite.svg#icon-arrow"></use>
+                                </svg>
+                            </span> 
+                        </button>
+                    </li>
+                    <li class="buttons__item"><a class="button button--simple button--blue" href="#"><span class="button__text">Простая ссылка</span></a></li>
+                    <li class="buttons__item"><button class="button button--simple button--disabled" type="button" disabled><span class="button__text">Простая недоступная</span></button></li>
+                </ul>
+            </div>
+
+            <!-- Иконочные -->
+            <h4>Иконочные</h4>
+            <div class="buttons">
+                <ul class="buttons__list">
+                    <li class="buttons__item">
+                        <button class="button button--icon button--simple button--small button--white" type="button">                              
+                            <span class="button__icon">
+                                <svg class="icon">
+                                    <use xlink:href="public/icons/sprite.svg#icon-arrow-circle"></use>
+                                </svg>
+                            </span> 
+                        </button>
+                    </li>
+                    <li class="buttons__item">
+                      <button class="button button--icon button--simple button--small button--white button--bottom" type="button">                              
+                          <span class="button__icon">
+                              <svg class="icon">
+                                  <use xlink:href="public/icons/sprite.svg#icon-arrow-circle"></use>
+                              </svg>
+                          </span> 
+                      </button>
+                  </li>
+                </ul>
+            </div>
         </div>
       </div>
     </div>
