@@ -19,7 +19,9 @@ $mirage: #1E293B;
 $color-background: $ebony;
 $color-text: $catskill-white;
 $color-time: $gray-chateau;
-
+$color-bg-block: $mirage;
+$color-link: $cerulean;
+$color-actions: $geyser;
 
 /**
 * Fonts
@@ -80,6 +82,7 @@ $transition-function: ease-in-out;
 */
 $border-radius-huge: 30px;
 $border-radius-large: 20px;
+$border-radius-medium: 8px;
 $border-radius-small: 5px;
 
 
