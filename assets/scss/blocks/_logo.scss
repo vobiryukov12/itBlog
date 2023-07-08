@@ -1,0 +1,11 @@
+.logo {
+  &__img {
+    width: rem(100px);
+    height: rem(44px);
+  }
+
+  @media #{$screen-tablet} {
+    width: rem(125px);
+    height: rem(44px);
+  }
+}
