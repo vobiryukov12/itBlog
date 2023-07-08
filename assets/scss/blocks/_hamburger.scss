@@ -1,0 +1,9 @@
+.hamburger {
+  @media #{$screen-tablet} {
+    display: none;
+  }
+
+  &__text {
+    font-weight: $font-weight-bold;
+  }
+}

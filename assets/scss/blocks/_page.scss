@@ -4,8 +4,15 @@
   min-height: 100vh;
 
   &__header {
-    height: 100px;
-    background-color: $cerulean;
+    margin-bottom: 10px;
+
+    @media #{$screen-tablet} {
+      margin-bottom: 20px;
+    }
+
+    @media #{$screen-desktop} {
+      margin-bottom: 30px;
+    }
   }
 
   &__content {
@@ -16,6 +23,7 @@
 
   &__footer {
     height: 100px;
+
     background-color: $cerulean;
   }
 }
