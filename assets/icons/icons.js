@@ -9,3 +9,4 @@ import './svg/email.svg';
 import './svg/posts.svg';
 import './svg/burger.svg';
 import './svg/close.svg';
+import './svg/github.svg';
