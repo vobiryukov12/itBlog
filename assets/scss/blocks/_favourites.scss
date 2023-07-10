@@ -10,6 +10,42 @@
     border-bottom-left-radius: $border-radius-medium;
   }
 
+  &--blue-white#{&}--fill & {
+    &__icon {
+      &-pic {
+        fill: $cerulean;
+
+        @media #{$screen-tablet} {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &--blue-white & {
+    &__icon {
+      &-pic {
+        color: $cerulean;
+
+        fill: $white;
+
+        &:hover {
+          fill: rgba(52, 170, 221, 0.5);
+        }
+
+        @media #{$screen-tablet} {
+          color: $white;
+
+          fill: transparent;
+  
+          &:hover {
+            fill: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+
   &--white#{&}--fill & {
     &__icon {
       &-pic {
