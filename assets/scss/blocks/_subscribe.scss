@@ -1,0 +1,77 @@
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: rem(20px);
+
+  @media #{$screen-tablet} {
+    flex-direction: row;
+
+    gap: rem(30px);
+  }
+
+  &__text {
+    font-weight: $font-weight-medium;
+    font-size: rem($font-size-medium);
+    text-align: center;
+
+    @media #{$screen-tablet} {
+      font-size: rem($font-size-large);
+      text-align: left;
+    }
+  }
+
+  &__name {
+    background: linear-gradient(270deg, #22d3ee 0%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    padding: rem(12px) rem(20px);
+
+    background: $color-bg-block;
+    border-radius: rem(30px);
+
+    gap: rem(10px);
+
+    @media #{$screen-tablet} {
+      gap: rem(50px);
+    }
+  }
+
+  &__field {
+    width: 100%;
+
+    font-size: rem($font-size-tiny);
+    color: $geyser;
+
+    background: transparent;
+    border: 0;
+    outline: 0;
+
+    &::placeholder {
+      color: $geyser;
+    }
+
+    @media #{$screen-tablet} {
+      font-size: rem($font-size-mini);
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+
+    font-size: rem($font-size-tiny);
+
+    @media #{$screen-tablet} {
+      font-size: rem($font-size-mini);
+    }
+  }
+}
