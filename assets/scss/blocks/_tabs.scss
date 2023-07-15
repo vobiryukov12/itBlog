@@ -95,4 +95,17 @@
       display: block;
     }
   }
+
+  &__body {
+    margin-bottom: rem(30px);
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 70%;
+
+    @media #{$screen-desktop} {
+      width: 50%;
+    }
+  }
 }
