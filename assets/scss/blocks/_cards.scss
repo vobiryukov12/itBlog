@@ -1,4 +1,6 @@
 .cards {
+  margin-bottom: rem(30px);
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +53,13 @@
       @media #{$screen-tablet} {
         width: 100%;
       }
+    }
+  }
+
+  &__hidden {
+    &-article,
+    &-news {
+      display: none;
     }
   }
 }
