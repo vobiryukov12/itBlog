@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUI</title>
+  <!-- Styles -->
+  <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body class="page" data-page>
+  <!-- Header -->
+  <header class="page__header header">
+    <div class="header__conatiner container">
+      <div class="header__row">
+        <div class="header__col">
+          <div class="header__logo logo">
+            <a class="logo__link" href="/">
+              <img class="logo__img" src="/public/images/icons/logo.svg" alt="Logo" width="125" height="44">
+            </a>
+          </div>
+        </div>
+
+        <div class="header__col">
+          <div class="hamburger" data-hamburger>
+            <button class="hamburger__button button button--icon button--simple button--blue" type="button">                            
+              <span class="hamburger__icon button__icon">
+                <svg class="icon">
+                    <use xlink:href="public/icons/sprite.svg#icon-burger"></use>
+                </svg>
+              </span> 
+            </button>
+          </div>
+        </div>
+
+        <div class="header__col">
+          <div class="header__nav nav" data-nav>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <svg class="header__icon icon">
+                    <use xlink:href="public/icons/sprite.svg#icon-posts"></use>
+                  </svg>
+                  <span>Посты</span> 
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <svg class="header__icon icon">
+                    <use xlink:href="public/icons/sprite.svg#icon-email"></use>
+                  </svg>
+                  <span>Подписаться</span> 
+                </a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link" href="#">
+                  <svg class="header__icon icon">
+                    <use xlink:href="public/icons/sprite.svg#icon-favorite"></use>
+                  </svg>
+                  <span>Избранное</span> 
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- /Header -->
+
+  <!-- Content -->
+  <div class="page__content content">
+    <div class="content__container container">
+      <main class="content__article article">
+        <h1>Современные фреймворки для разработки веб-приложений</h1>
+        <time>04.02.2020</time>
+        <img src="/public/images/web-frameworks.png" alt="Article image">
+        <p>В мире фронтенда много различных фреймворков для разработки одностраничных приложений. Большинство из них различаются подходами к разработке и инструментами, которыми они обладают. Но в основе всех этих фреймворков часто лежат одни и те же концепции. Эти концепции и различия в подходах мы рассмотрим в этой статье.</p>
+        <h2>Кратко</h2>
+        <p>Чтобы облегчить поиск изменений в приложении и работу с DOM браузера, некоторые фреймворки используют Virtual DOM. Virtual DOM – объект, который хранит структуру дерева компонентов и их текущее состояние.
+        <br><br>
+        React использует Virtual DOM для отслеживания изменений. После каждого изменения состояния React создаёт новый Virtual DOM и сравнивает его с предыдущим, чтобы узнать, какие части приложения изменились.
+        <br><br>
+        Vue использует Virtual DOM и специальные объекты Proxy, чтобы узнавать, когда изменились данные.
+        <br><br>
+        Angular не использует Virtual DOM, но модифицирует браузерный DOM API, чтобы иметь возможность следить за изменением данных. Таким образом, если пользователь взаимодействует со страницей, то Angular проверяет, не изменились ли какие-то данные приложения.
+        <br><br>
+        Svelte не использует Virtual DOM, но во время компиляции приложения формирует функции, которые следят за изменением данных и обновляют соответствующие DOM-элементы.</p>
+      </main>
+    </div>
+  </div>
+  <!-- /Content -->
+
+  <!-- Footer -->
+  <footer class="page__footer footer">
+    <div class="footer__container container">
+      <span class="footer__copyright">© 2023</span>
+      <a href="https://github.com/vobiryukov12">
+        <svg class="icon footer__icon">
+          <use xlink:href="public/icons/sprite.svg#icon-github"></use>
+        </svg>
+      </a>
+    </div>
+  </footer>
+  <!-- /Footer -->
+
+  <!-- Scripts -->
+  <script src="./public/js/script.js"></script>
+</body>
+</html>
