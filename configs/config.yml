@@ -1,0 +1,9 @@
+port: "8070"
+
+db:
+    Username: "root"
+    password: "root"
+    host: "localhost"
+    port: "3306"
+    dbname: "ItBlog"
+    sslmode: "disable"
