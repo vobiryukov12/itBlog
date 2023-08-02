@@ -2,7 +2,6 @@ package repository
 
 import (
 	"database/sql"
-	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
 )
@@ -12,17 +11,15 @@ const (
 )
 
 type Config struct {
-	Host     string
-	Port     string
-	Username string
-	Password string
-	DBName   string
-	SSLMode  string
+	User   string
+	Passwd string
+	Net    string
+	Addr   string
+	DBName string
 }
 
 func NewMysqlDB(cfg Config) (*sql.DB, error) {
-	db, err := sql.Open("mysql", fmt.Sprintf("%s:%s@/%s",
-		cfg.Username, cfg.Password, cfg.DBName))
+	db, err := sql.Open("mysql", "root:root@/ItBlog")
 	if err != nil {
 		return nil, err
 	}
