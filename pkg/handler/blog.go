@@ -1,15 +1,32 @@
 package handler
 
 import (
-	"net/http"
+	"html/template"
+	"os"
 
 	"github.com/gin-gonic/gin"
 )
 
+type entry struct {
+	Name string
+	Done bool
+}
+
+type ToDo struct {
+	User string
+	List []entry
+}
+
 func (h *Handler) createBlog(c *gin.Context) {
-	c.JSON(http.StatusOK, map[string]interface{}{
-		"id": "test",
-	})
+	paths := []string{
+		"todo.tmpl",
+	}
+
+	t := template.Must(template.New("html-tmpl").ParseFiles(paths...))
+	err := t.Execute(os.Stdout, ToDo.User)
+	if err != nil {
+		panic(err)
+	}
 }
 
 func (h *Handler) getAllItems(c *gin.Context) {

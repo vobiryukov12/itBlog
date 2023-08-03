@@ -16,10 +16,6 @@ func main() {
 		logrus.Fatalf("error initializing configs: %s", err.Error())
 	}
 
-	//fileServer := http.FileServer(http.Dir("./template"))
-
-	//http.HandleFunc("/hi", handler.IndexHandler)
-
 	db, err := repository.NewMysqlDB(repository.Config{
 		User:   viper.GetString("username"),
 		Passwd: viper.GetString("password"),
