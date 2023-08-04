@@ -2,6 +2,7 @@ package handler
 
 import (
 	"github.com/Zemavong/itBlog/pkg/service"
+	"github.com/foolin/goview/supports/ginview"
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,7 +15,9 @@ func NewHandler(services *service.Service) *Handler {
 }
 
 func (h *Handler) InitRoutes() *gin.Engine {
-	router := gin.New()
+	router := gin.Default()
+
+	router.HTMLRender = ginview.Default()
 
 	router.GET("/", h.createBlog)
 
