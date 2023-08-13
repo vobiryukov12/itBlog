@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  &::before,
+  &::after {
+      box-sizing: border-box;
+  }
+}
+
+html {
+  font-family: $font-family;
+  font-size: 100%;
+
+  color: $color-text;
+  background-color: $color-background;
+}
+
+body {
+  font-size: rem($font-size-base);
+  font-weight: $font-weight-regular;
+}
+
+h1,
+h2,
+h3 {
+  &:not([class]) {
+    font-weight: $font-weight-bold;
+  }
+}
+
+h1:not([class]) {
+  text-align: center;
+  font-size: rem($font-size-normal);
+  margin-bottom: rem(20px);
+  margin-top: 0;
+
+  @media #{$screen-tablet} {
+    font-size: rem($font-size-medium);
+    margin-bottom: rem(30px);
+  }
+
+  @media #{$screen-desktop} {
+    font-size: rem($font-size-huge);
+    margin-bottom: rem(50px);
+  }
+}
+
+h2:not([class]) {
+  font-size: rem($font-size-small);
+  margin-bottom: rem(30px);
+
+  @media #{$screen-tablet} {
+    font-size: rem($font-size-normal);
+  }
+
+  @media #{$screen-desktop} {
+    font-size: rem($font-size-large);
+  }
+}
+
+h3:not([class]) {
+  font-size: rem($font-size-tiny);
+  margin-bottom: rem(30px);
+
+  @media #{$screen-tablet} {
+    font-size: rem($font-size-small);
+  }
+
+  @media #{$screen-desktop} {
+    font-size: rem($font-size-medium);
+  }
+}
+
+time:not([class]) {
+  display: block;
+  margin-bottom: rem(20px);
+  color: $color-time;
+  font-size: rem($font-size-tiny);
+  
+  @media #{$screen-tablet} {
+    margin-bottom: rem(30px);
+    font-size: rem($font-size-small);
+  }
+
+  @media #{$screen-desktop} {
+    margin-bottom: rem(40px);
+    font-size: rem($font-size-normal);
+  }
+}
+
+img:not([class]) {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  margin-bottom: rem(20px);
+  border-radius: rem(20px);
+  margin-top: rem(20px);
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media #{$screen-tablet} {
+    margin-bottom: rem(30px);
+  }
+
+  @media #{$screen-desktop} {
+    margin-bottom: rem(40px);
+  }
+}
+
+p:not([class]) {
+  $font-size: $font-size-tiny;
+  font-size: rem($font-size);
+  line-height: calc(28px / $font-size);
+  margin-bottom: rem(20px);
+
+  @media #{$screen-tablet} {
+    $font-size: rem($font-size-mini);
+  }
+
+  @media #{$screen-desktop} {
+    $font-size: $font-size-small;
+    font-size: rem($font-size);
+    line-height: calc(35px / $font-size);
+  }
+}
+
+blockquote:not([class]) {
+  $font-size: $font-size-tiny;
+  font-size: rem($font-size);
+  line-height: calc(28px / $font-size);
+  margin-right: 0;
+  margin-bottom: rem(20px);
+  padding: rem(10px) rem(15px) rem(10px) rem(20px);
+
+  border-left: rem(5px) solid $cerulean;
+  border-top-left-radius: rem($border-radius-small);
+  border-bottom-left-radius: rem($border-radius-small);
+
+  @media #{$screen-tablet} {
+    $font-size: rem($font-size-mini);
+    padding: rem(15px) rem(20px) rem(15px) rem(25px);
+  }
+
+  @media #{$screen-desktop} {
+    $font-size: $font-size-small;
+    font-size: rem($font-size);
+    line-height: calc(35px / $font-size);
+    padding: rem(20px) rem(25px) rem(20px) rem(30px);
+  }
+}
+
+a:not([class]) {
+  text-decoration: none;
+
+  color: $cerulean;
+
+  &:hover {
+      text-decoration: underline;
+  }
+
+  &:active {
+      opacity: 0.5;
+  }
+}
+
+ol:not([class]),
+ul:not([class]) {
+    padding-left: rem(40px);
+    margin-top: rem(10px);
+    margin-bottom: rem(20px);
+
+    li:not([class]) {
+        margin-bottom: rem(10px);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &::marker {
+          color: $cerulean;
+        }
+    }
+}

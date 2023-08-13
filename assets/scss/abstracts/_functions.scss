@@ -1,0 +1,23 @@
+@function rem($pixels, $context: $font-size-base) {
+  @if (unitless($pixels)) {
+      $pixels: calc($pixels * 1px);
+  }
+
+  @if (unitless($context)) {
+      $context: calc($context * 1px);
+  }
+
+  @return calc($pixels / $context * 1rem);
+}
+
+@function em($pixels, $context: $font-size-base) {
+  @if (unitless($pixels)) {
+      $pixels: calc($pixels * 1px);
+  }
+
+  @if (unitless($context)) {
+      $context: calc($context * 1px);
+  }
+
+  @return calc($pixels / $context * 1em);
+}

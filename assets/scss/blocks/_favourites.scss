@@ -1,0 +1,101 @@
+.favourites {
+  &--block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: rem(35px);
+    height: rem(35px);
+
+    background-color: $white;
+    border-bottom-left-radius: $border-radius-medium;
+  }
+
+  &--blue-white#{&}--fill & {
+    &__icon {
+      &-pic {
+        fill: $cerulean;
+
+        @media #{$screen-tablet} {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  &--blue-white & {
+    &__icon {
+      &-pic {
+        color: $cerulean;
+
+        fill: $white;
+
+        &:hover {
+          fill: rgba(52, 170, 221, 0.5);
+        }
+
+        @media #{$screen-tablet} {
+          color: $white;
+
+          fill: transparent;
+  
+          &:hover {
+            fill: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+
+  &--white#{&}--fill & {
+    &__icon {
+      &-pic {
+        fill: $white;
+      }
+    }
+  }
+
+  &--white & {
+    &__icon {
+      &-pic {
+        color: $white;
+
+        fill: transparent;
+
+        &:hover {
+          fill: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  &--blue#{&}--fill & {
+    &__icon {
+      &-pic {
+        fill: $cerulean;
+      }
+    }
+  }
+
+  &--blue & {
+    &__icon {
+      &-pic {
+        color: $cerulean;
+
+        fill: $white;
+
+        &:hover {
+          fill: rgba(52, 170, 221, 0.5);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    &-pic {
+      width: rem(24px);
+      height: rem(24px);
+
+      transition: fill $transition-duration $transition-function;
+    }
+  }
+}

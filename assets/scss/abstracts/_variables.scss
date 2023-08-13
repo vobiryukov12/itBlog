@@ -1,0 +1,98 @@
+/**
+* Colors
+*/
+$ebony: #0F172A;
+$catskill-white: #F8FAFC;
+$white: #fff;
+$bright-turquoise: #22D3EE;
+$cerulean: #0EA5E9;
+$geyser: #CBD5E1;
+$mountain-meadow: #10B981;
+$sulu: #BEF264;
+$gray-chateau: #9CA3AF;
+$alizarin-crimson: #DC2626;
+$ecstasy: #F97316;
+$electric-violet: #7C3AED;
+$malibu: #60A5FA;
+$mirage: #1E293B;
+
+$color-background: $ebony;
+$color-text: $catskill-white;
+$color-time: $gray-chateau;
+$color-bg-block: $mirage;
+$color-link: $cerulean;
+$color-actions: $geyser;
+
+/**
+* Fonts
+*/
+$font-path: "/public/fonts";
+$font-family-default: "Arial", "Helvetica", sans-serif;
+$font-family-custom: "Roboto";
+
+$font-size-base: 16px;
+$font-family: $font-family-custom, $font-family-default;
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$font-size-huge: 48px;
+$font-size-large: 36px;
+$font-size-medium: 30px;
+$font-size-normal: 24px;
+$font-size-small: 20px;
+$font-size-mini: 18px;
+$font-size-tiny: 14px;
+
+
+/**
+* Breakpoints
+*/
+$screen-desktop: "(min-width: 1440px)";
+$screen-tablet: "(min-width: 768px)";
+
+
+
+/**
+* Layout
+*/
+$width-container: 1240px;
+$gap-container: 20px;
+
+
+
+/**
+* Sizes
+*/
+
+
+
+/**
+* Transitions and Animations
+*/
+$transition-duration: 300ms;
+$transition-duration-fast: 100ms;
+$transition-function: ease-in-out;
+
+
+
+/**
+* Radius
+*/
+$border-radius-huge: 30px;
+$border-radius-large: 20px;
+$border-radius-medium: 8px;
+$border-radius-small: 5px;
+
+
+
+/**
+* Box-shadows
+*/
+$box-shadow: 0px rem(4px) rem(10px) 0px rgba(0, 0, 0, 0.10);
+
+
+/**
+* Z-indexes
+*/

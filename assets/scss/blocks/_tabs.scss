@@ -1,0 +1,111 @@
+.tabs {
+  &__items {
+    margin-bottom: rem(10px);
+
+    @media #{$screen-tablet} {
+      margin-bottom: rem(30px);
+    }
+
+    @media #{$screen-desktop} {
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &--blue & {
+    &__item {
+      color: $cerulean;
+      letter-spacing: rem(0.32px);
+
+      background-color: $geyser;
+      border-radius: rem(4px);
+
+      &--active {
+        color: $white;
+
+        background-color: $cerulean;
+      }
+    }
+  }
+
+  &--simple & {
+    &__items {
+      border-bottom: 1px solid $geyser;
+    }
+
+    &__item {
+      position: relative;
+
+      padding: 0;
+      padding-bottom: rem(14px);
+
+      color: $geyser;
+
+      &--active {
+        color: $cerulean;
+
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: rem(-1px);
+          left: 0;
+
+          display: inline-block;
+          height: rem(4px);
+
+          background-color: $cerulean;
+          border-radius: rem(4px) rem(4px) 0 0;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(50px);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+
+    list-style: none;
+  }
+
+  &__item {
+    padding: rem(10px) rem(20px);
+
+    font-weight: $font-weight-medium;
+    line-height: 130%;
+
+    cursor: pointer;
+
+    transition: color $transition-duration $transition-function,
+                      background-color $transition-duration $transition-function;
+
+    &:not(:last-child) {
+      margin-right: rem(20px);
+    }
+  }
+
+  &__block {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__body {
+    margin-bottom: rem(30px);
+  }
+
+  &__button {
+    margin: 0 auto;
+    width: 70%;
+
+    @media #{$screen-desktop} {
+      width: 50%;
+    }
+  }
+}

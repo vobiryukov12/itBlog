@@ -1,0 +1,157 @@
+.button {
+  $size-medium: 40px;
+  $size-mini: 24px;
+  $size-normal: 50px;
+  $size-small: 29px;
+
+  $font-size: $font-size-base;
+  font-size: rem($font-size);
+  font-weight: $font-weight-medium;
+  line-height: (15px / $font-size);
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  height: $size-normal;
+  padding: 0 rem(30px);
+
+  cursor: pointer;
+  user-select: none;
+  transition: color $transition-duration $transition-function,
+              border-color $transition-duration $transition-function,
+              background-color $transition-duration $transition-function;
+  text-decoration: none;
+
+  color: $white;
+  border: 0;
+  border-radius: $border-radius-small;
+
+  appearance: none;
+
+  &--medium {
+      height: rem($size-medium);
+  }
+
+  &--small {
+      height: rem($size-small);
+
+      line-height: 120%;
+      letter-spacing: rem(0.01 * $font-size);
+  }
+
+  &--mini {
+      height: rem($size-mini);
+  }
+  
+  &--ellipse {
+      border-radius: 30px;
+  }
+
+  &--icon & {
+      &__icon {
+          width: rem(34px);
+          height: rem(34px);
+      }
+  }
+
+  &--disabled {
+      cursor: default;
+  }
+
+  &--simple {
+      height: auto;
+      padding: 0;
+
+      border: 0;
+      background-color: transparent;
+
+      letter-spacing: rem(0.01 * $font-size);
+  }
+
+  &--covered#{&}--blue {
+      background-color: $cerulean;
+
+
+      &:hover {
+          background-color: rgba($malibu, 0.5);
+      }
+
+      &:focus {
+          background-color: rgba($malibu, 0.5);
+      }
+  }
+
+  &--covered#{&}--disabled {
+      background-color: $geyser;
+
+      &:hover,
+      &:focus {
+          background-color: $geyser;
+      }
+  }
+
+  &--simple#{&}--blue {
+      color: $cerulean;
+
+      &:hover {
+          color: $geyser;
+      }
+
+      &:focus {
+          color: rgba($geyser, 0.5);
+      }
+  }
+
+  &--simple#{&}--white {
+    color: $white;
+
+    &:hover {
+        color: $cerulean;
+    }
+
+    &:focus {
+        color: rgba($cerulean, 0.5);
+    }
+  }
+
+  &--simple#{&}--bottom {
+    transform: rotate(90deg);
+  }
+
+  &--simple#{&}--disabled {
+      color: rgba($geyser, 0.5);
+
+      &:hover,
+      &:focus {
+          color: rgba($geyser, 0.5);
+      }
+  }
+
+  &__icon {
+      $icon-margin: 10px;
+      $icon-size: 10px;
+      $icon-size-big: 24px;
+      
+      width: rem($icon-size);
+      height: rem($icon-size);
+      margin-right: rem($icon-margin);
+
+      &:last-child {
+          margin-right: 0;
+      }
+
+      &--right {
+          margin-right: 0;
+          margin-left: rem($icon-margin);
+      }
+
+      &--big {
+          width: rem($icon-size-big);
+          height: rem($icon-size-big);
+      }
+  }
+}
