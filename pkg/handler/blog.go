@@ -7,9 +7,7 @@ import (
 )
 
 func (h *Handler) createBlog(c *gin.Context) {
-	c.HTML(http.StatusOK, "index", gin.H{
-		"title": "Main website",
-	})
+	c.JSON(http.StatusOK, map[string]interface{}{"s": "s"})
 }
 
 func (h *Handler) getAllItems(c *gin.Context) {

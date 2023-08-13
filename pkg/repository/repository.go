@@ -1,6 +1,9 @@
 package repository
 
-import "database/sql"
+import (
+	itblog "github.com/Zemavong/itBlog"
+	"github.com/jmoiron/sqlx"
+)
 
 type Blog interface {
 	Create(blogId int, title string, content string, img string)
@@ -10,12 +13,18 @@ type Blog interface {
 	Update(blogId int, title string, content string, img string)
 }
 
+type Authorization interface {
+	CreateUser(user itblog.User) (int, error)
+	GetUser(username, password string) (itblog.User, error)
+}
+
 type Repository struct {
+	Authorization
 	Blog
 }
 
-func NewRepository(db *sql.DB) *Repository {
+func NewRepository(db *sqlx.DB) *Repository {
 	return &Repository{
-		Blog: NewBlogMysql(db),
+		Blog: NewBlogPostgres(db),
 	}
 }

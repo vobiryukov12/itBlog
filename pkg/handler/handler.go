@@ -19,10 +19,15 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 	router.HTMLRender = ginview.Default()
 
-	router.GET("/", h.createBlog)
+	auth := router.Group("/blogs")
+	{
+		auth.POST("/sign-up", h.signUp)
+		auth.POST("/sign-in", h.signIn)
+	}
 
 	api := router.Group("/api")
 	{
+
 		blogs := api.Group("/blogs")
 		{
 			//blogs.POST("/", h.createList)
