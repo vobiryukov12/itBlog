@@ -19,7 +19,7 @@ func (h *Handler) InitRoutes() *gin.Engine {
 
 	router.HTMLRender = ginview.Default()
 
-	auth := router.Group("/blogs")
+	auth := router.Group("/")
 	{
 		auth.POST("/sign-up", h.signUp)
 		auth.POST("/sign-in", h.signIn)
