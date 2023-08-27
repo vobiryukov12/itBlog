@@ -25,6 +25,7 @@ type Repository struct {
 
 func NewRepository(db *sqlx.DB) *Repository {
 	return &Repository{
-		Blog: NewBlogPostgres(db),
+		Authorization: NewAuthPostgres(db),
+		Blog:          NewBlogPostgres(db),
 	}
 }
