@@ -1,0 +1,44 @@
+.header {
+  padding-top: rem(10px);
+  padding-bottom: rem(10px);
+
+  background-color: $color-background;
+
+  @media #{$screen-tablet} {
+    padding-top: rem(20px);
+    padding-bottom: rem(20px);
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    row-gap: 20px;
+  }
+
+  &__col {
+    &:last-child {
+      flex-basis: 100%;
+    }
+
+    @media #{$screen-tablet} {
+      &:last-child {
+        flex-basis: auto;
+      }
+    }
+  }
+
+  &__icon {
+    width: rem(16px);
+    height: rem(16px);
+
+    color: $cerulean;
+
+    @media #{$screen-tablet} {
+      width: rem(24px);
+      height: rem(24px);
+    }
+  }
+}
